@@ -5,14 +5,14 @@ metadata:
   generateName: upgrade-sql-schema
   annotations:
     helm.sh/hook: pre-install
-    helm.sh/hook-weight: "-2"
+    helm.sh/hook-weight: "-5"
 spec:
   template:
     spec:
       containers:
         - name: upgrade-sql-schema
           image: alpine:latest
-          command: ["sleep", "5"]
+          command: ["sleep", "6"]
       restartPolicy: Never
 ---
 apiVersion: batch/v1
